@@ -8,35 +8,35 @@ Also, it offers search results of news article for user supplied text.
 
 ## Basic Usage:
 
-::: Get news for Google News Indian Edition
->>> import gnp
->>> a = gnp.get_google_news(gnp.EDITION_ENGLISH_INDIA)
+### Get news for Google News Indian Edition
+> >> import gnp
+> >> a = gnp.get_google_news(gnp.EDITION_ENGLISH_INDIA)
 
 
-::: Get news for Google News US Version as if browsing from London,UK
->>> import gnp
->>> b = gnp.get_google_news(gnp.EDITION_ENGLISH_US,geo='London,UK')
+### Get news for Google News US Version as if browsing from London,UK
+> >> import gnp
+> >> b = gnp.get_google_news(gnp.EDITION_ENGLISH_US,geo='London,UK')
 
-::: Get news for search Query "What's happening on earth".
-    Default you get results for 'Barack Obama'
->>> import gnp
->>> c = gnp.get_google_news_query("What's happening on earth")
+### Get news for search Query "What's happening on earth".
+####    Default you get results for 'Barack Obama'
 
-::: Method to write to flatfile
+> >> import gnp
+> >> c = gnp.get_google_news_query("What's happening on earth")
 
->>> import gnp
->>> d = gnp.get_google_news(gnp.EDITION_ENGLISH_INDIA)
+### Method to write to flatfile
 
->>> import codecs
->>> import json
+> >> import gnp
+> >> d = gnp.get_google_news(gnp.EDITION_ENGLISH_INDIA)
 
->>> j = json.dumps(d, indent=4, ensure_ascii=False )
->>> f = codecs.open( 'news.json', 'w', encoding='utf-8')
->>> f.write(j.decode('utf-8'))
->>> f.close()
+> >> import codecs
+> >> import json
 
-List of Editions Available::
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> >> j = json.dumps(d, indent=4, ensure_ascii=False )
+> >> f = codecs.open( 'news.json', 'w', encoding='utf-8')
+> >> f.write(j.decode('utf-8'))
+> >> f.close()
+
+####List of Editions Available::
 
 +------------------------------+--------------------------------+
 |         Edition Name         |             Region             |
@@ -116,7 +116,6 @@ List of Editions Available::
 +------------------------------+--------------------------------+
 
 Copyright (c) 2014, Manuel David Pandian
-License : MIT (see LICENSE for details)
 
 
 
